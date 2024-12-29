@@ -16,7 +16,14 @@ const app = express();
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 
-app.use(cors());
+// Middlewares
+// Update your cors middleware configuration
+app.use(cors({
+   credentials: true,
+   origin: '*', // This allows all origins
+   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+ }));
 app.use(express.json());
 app.use(cookieParser());
 
