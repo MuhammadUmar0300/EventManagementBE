@@ -20,7 +20,7 @@ const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 // Update your cors middleware configuration
 app.use(cors({
    credentials: true,
-   origin: 'event-managment-fe.vercel.app',
+   origin: ['event-managment-fe.vercel.app','http://localhost:5174'],
  }));
 
 
