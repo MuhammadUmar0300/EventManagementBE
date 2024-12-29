@@ -16,14 +16,9 @@ const app = express();
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-   cors({
-      credentials: true,
-      origin: ["https://events-management-system.netlify.app/","https://event-managment-fe.vercel.app/"],
-   })
-);
 
 // console.log()
 mongoose.connect(process.env.MONGO_URL);
