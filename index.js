@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "https://events-management-system.netlify.app/",
+      origin: ["https://events-management-system.netlify.app/","https://event-managment-fe.vercel.app/"],
    })
 );
 
