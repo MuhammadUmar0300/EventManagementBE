@@ -20,10 +20,11 @@ const jwtSecret = "bsbsfbrnsftentwnnwnwn";
 // Update your cors middleware configuration
 app.use(cors({
    credentials: true,
-   origin: '*', // This allows all origins
-   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+   origin: 'event-managment-fe.vercel.app',
  }));
+
+
+// app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
